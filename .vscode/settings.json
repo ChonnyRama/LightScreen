@@ -1,4 +1,6 @@
 {
-      "files.associations": {
-        "*.css": "tailwindcss"},
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.fontFamily": "Fira Code, Noto Color Emoji, monospace"
 }
