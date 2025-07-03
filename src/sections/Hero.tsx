@@ -5,11 +5,20 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import { DM_Serif_Display } from "next/font/google";
+
+const dmSerif = DM_Serif_Display({
+  weight: "400", // it's only available in 400
+  subsets: ["latin"],
+});
 
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+    <div
+      className="py-28 md:py-44 lg:py-56 lg:-mt-10 relative z-0 overflow-x-clip"
+      id="home"
+    >
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] -z-10">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{
@@ -105,35 +114,47 @@ export const HeroSection = () => {
         </HeroOrbit>
       </div>
       <div className="container">
-        <div className="flex flex-col items-center">
-          <Image className="size-[100px]" src={lsLogo} alt="LightScreen logo" />
-          <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
-            <div className="bg-green-500 size-2.5 rounded-full relative">
-              <div className="absolute inset-0 bg-green-500 animate-ping-large rounded-full"></div>
+        <div className="relative top-[-0.9rem] md:top-[-2.3rem]">
+          <div className="flex flex-col items-center z-10">
+            <Image
+              className="size-[100px]"
+              src={lsLogo}
+              alt="LightScreen logo"
+            />
+            <div
+              className={`mb-4 text-center font-semibold text-4xl tracking-wide leading-tight bg-gradient-to-b from-sky-300 to-cyan-600 text-transparent bg-clip-text animate-pulse-slow ${dmSerif.className}`}
+            >
+              Light Screen Studio
             </div>
-            <div className="text-sm font-medium">
-              Available for new projects
+            <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+              <div className="bg-green-500 size-2.5 rounded-full relative">
+                <div className="absolute inset-0 bg-green-500 animate-ping-large rounded-full"></div>
+              </div>
+              <div className="text-sm font-medium">
+                Available for new projects
+              </div>
             </div>
           </div>
-        </div>
-        <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl text-center mt-8 tracking-wide md:text-5xl ">
-            Building Experiences That Reflect You
-          </h1>
-          <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in transforming ideas into functional, high-performing
-            web applications. Let's discuss your next project.
-          </p>
-        </div>
-        <div className="flex flex-col items-center mt-8 gap-4 md:flex-row justify-center">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
-            <span>👋</span>
-            <span className="font-semibold">Let's Connect</span>
-          </button>
+          <div className="max-w-lg mx-auto">
+            <h1 className="font-serif text-3xl text-center mt-8 tracking-wide md:text-4xl ">
+              I build websites that grow with your brand
+            </h1>
+            <p className="mt-4 text-center text-white/60 md:text-lg">
+              I help small brands and creatives launch fast, high-performing
+              websites that look great, convert visitors, and get found so you
+              can focus on growing your business, not fighting your tools.
+            </p>
+          </div>
+          <div className="flex flex-col items-center mt-8 gap-4 md:flex-row justify-center">
+            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+              <span className="font-semibold">Explore My Work</span>
+              <ArrowDown className="size-4" />
+            </button>
+            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
+              <span>👋</span>
+              <span className="font-semibold">Schedule a Call</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
