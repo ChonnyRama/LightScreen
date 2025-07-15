@@ -30,6 +30,8 @@ const config: Config = {
         "move-left": "move-left 1s linear infinite",
         "move-right": "move-right 1s linear infinite",
         "pulse-slow": "pulse 4s ease-in-out infinite",
+        "fade-in": "fade-in 0.5s ease-in-out",
+        wave: "wave 1.2s ease-in-out",
       },
       keyframes: {
         "ping-large": {
@@ -45,6 +47,19 @@ const config: Config = {
         "move-right": {
           "0%": { transform: "translateX(-50%)" },
           "100%": { transform: "translateX(0)" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        wave: {
+          "0%": { transform: "rotate(0deg)" },
+          "15%": { transform: "rotate(15deg)" },
+          "30%": { transform: "rotate(-8deg)" },
+          "40%": { transform: "rotate(14deg)" },
+          "50%": { transform: "rotate(-4deg)" },
+          "60%": { transform: "rotate(10deg)" },
+          "100%": { transform: "rotate(0deg)" },
         },
       },
     },

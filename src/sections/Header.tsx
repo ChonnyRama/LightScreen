@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-export const Header = () => {
+export const Header = ({ onContactClick }: { onContactClick: () => void }) => {
   const [selected, setSelected] = React.useState("home");
 
   const selectedStyle =
@@ -15,41 +15,65 @@ export const Header = () => {
     }
   };
   return (
-    <div className="flex justify-center items-center fixed top-3 w-full z-10">
-      <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur ">
-        <a
-          href="#home"
-          className={"nav-item " + (selected === "home" ? selectedStyle : "")}
-          onClick={() => handleClick("home")}
+    <div className="fixed top-3 w-full z-10 px-4">
+      <div className="relative max-w-5xl mx-auto">
+        <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur mx-auto w-fit">
+          <a
+            href="#home"
+            className={"nav-item " + (selected === "home" ? selectedStyle : "")}
+            onClick={() => handleClick("home")}
+          >
+            Home
+          </a>
+          <a
+            href="#services"
+            className={
+              "nav-item " + (selected === "services" ? selectedStyle : "")
+            }
+            onClick={() => handleClick("services")}
+          >
+            Services
+          </a>
+          <a
+            href="#projects"
+            className={
+              "nav-item " + (selected === "projects" ? selectedStyle : "")
+            }
+            onClick={() => handleClick("projects")}
+          >
+            Projects
+          </a>
+          <a
+            href="#about"
+            className={
+              "nav-item " + (selected === "about" ? selectedStyle : "")
+            }
+            onClick={() => handleClick("about")}
+          >
+            About
+          </a>
+          <a
+            href="#contact"
+            onClick={() => handleClick("contact")}
+            className={
+              "nav-item " + (selected === "contact" ? selectedStyle : "")
+            }
+          >
+            Contact
+          </a>
+        </nav>
+
+        <button
+          onClick={onContactClick}
+          className="absolute right-0 top-1/2 -translate-y-1/2 ml-4 inline-flex items-center justify-start px-6 py-1 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
         >
-          Home
-        </a>
-        <a
-          href="#projects"
-          className={
-            "nav-item " + (selected === "projects" ? selectedStyle : "")
-          }
-          onClick={() => handleClick("projects")}
-        >
-          Projects
-        </a>
-        <a
-          href="#about"
-          className={"nav-item " + (selected === "about" ? selectedStyle : "")}
-          onClick={() => handleClick("about")}
-        >
-          About
-        </a>
-        <a
-          href="#contact"
-          onClick={() => handleClick("contact")}
-          className={
-            "nav-item " + (selected === "contact" ? selectedStyle : "")
-          }
-        >
-          Contact
-        </a>
-      </nav>
+          <span className="w-48 h-48 rounded rotate-[-40deg] bg-sky-500 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+
+          <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
+            Book a Call
+          </span>
+        </button>
+      </div>
     </div>
   );
 };

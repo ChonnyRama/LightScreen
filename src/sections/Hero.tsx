@@ -12,7 +12,7 @@ const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
 });
 
-export const HeroSection = () => {
+export const HeroSection = ({ onContactClick }) => {
   return (
     <div
       className="py-28 md:py-44 lg:py-56 lg:-mt-10 relative z-0 overflow-x-clip"
@@ -150,9 +150,18 @@ export const HeroSection = () => {
               <span className="font-semibold">Explore My Work</span>
               <ArrowDown className="size-4" />
             </button>
-            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
-              <span>👋</span>
-              <span className="font-semibold">Schedule a Call</span>
+            <button
+              onClick={onContactClick}
+              className="relative inline-flex items-center gap-2 px-6 h-12 overflow-hidden bg-white text-gray-900 rounded-xl group transition-all duration-300"
+            >
+              {/* Animated sliding background */}
+              <span className="absolute w-48 h-48 rounded rotate-[-40deg] bg-sky-500 bottom-0 left-0 -translate-x-full translate-y-full mb-9 ml-9 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:mb-32 group-hover:ml-0"></span>
+
+              {/* Button content */}
+              <span className="relative z-10 group-hover:animate-wave">👋</span>
+              <span className="relative z-10 font-semibold transition-colors duration-300 ease-in-out group-hover:text-white">
+                Book a Call
+              </span>
             </button>
           </div>
         </div>
