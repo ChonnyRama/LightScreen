@@ -166,12 +166,12 @@ export const AboutSection = () => {
               <ToolboxItems
                 items={toolboxItems}
                 className=""
-                itemsWrapperClassName="animate-move-left [animation-duration:30s] hover:[animation-play-state:paused]"
+                itemsWrapperClassName="animate-move-left [animation-duration:35s] hover:[animation-play-state:paused]"
               />
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6"
-                itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:15s] hover:[animation-play-state:paused]"
+                itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:17s] hover:[animation-play-state:paused]"
               />
             </Card>
           </div>

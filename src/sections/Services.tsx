@@ -1,6 +1,9 @@
+"use client";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import CheckIcon from "@/assets/icons/check-circle.svg";
+import React from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 const services = [
   {
@@ -57,7 +60,14 @@ export const ServicesSection = () => {
               <span className="text-4xl font-bold text-sky-400 mr-3">
                 {service.number}
               </span>
-              <h3 className="text-3xl font-semibold">{service.title}</h3>
+              <h3 className="text-3xl font-semibold ">
+                <Typewriter
+                  words={[service.title]}
+                  loop={1}
+                  cursor
+                  cursorStyle="_"
+                />
+              </h3>
               <div className="md:col-start-2">
                 <p className="text-white/80 mb-4">{service.description}</p>
                 <ul className="list-disc list-inside space-y-2">
