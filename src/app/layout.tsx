@@ -12,22 +12,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Light Screen Studio",
     description: "Helping brands shine online.",
-    url: "https://yourdomain.com",
+    url: "https://lightscreenstudio.com",
     siteName: "Light Screen Studio",
     images: [
       {
-        url: "/metaimage.png",
+        url: "/LSlogo.png",
         width: 1200,
         height: 630,
         alt: "LightScreen Studios Logo",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Light Screen Studio",
-    description: "Helping brands shine online.",
-    images: ["/metaimage.png"],
   },
   icons: {
     icon: "/favicon.ico",

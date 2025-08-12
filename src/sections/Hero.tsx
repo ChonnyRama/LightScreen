@@ -6,7 +6,11 @@ import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 
-export const HeroSection = ({ onContactClick }) => {
+type HeroSectionProps = {
+  onContactClick: () => void;
+};
+
+export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
   return (
     <div
       className="py-28 md:py-44 lg:py-56 lg:-mt-10 relative z-0 overflow-x-clip"

@@ -17,6 +17,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",
+    "sharp": "^0.34.3",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
