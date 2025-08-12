@@ -19,7 +19,7 @@ export const ContactSection = ({
           <div className="flex flex-col gap-8 md:gap-16 justify-center items-center md:flex-row">
             <div className="">
               <h2 className="font-sans text-2xl md:text-3xl">
-                Let&aposs build something that performs !
+                Let&apos;s build something that performs !
               </h2>
               <p className="text-sm mt-2 md:text-base">
                 Ready to turn your vision into a high-performing site that
@@ -27,7 +27,7 @@ export const ContactSection = ({
               </p>
               <div className="my-2 border-t border-white/10" />
               <p className="text-sm mt-2 md:text-base">
-                Let&aposs talk about how I can help you level up with strategy,
+                Let&apos;s talk about how I can help you level up with strategy,
                 design, and moving your business forward.
               </p>
             </div>
