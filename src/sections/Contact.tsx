@@ -18,7 +18,7 @@ export const ContactSection = ({
           ></div>
           <div className="flex flex-col gap-8 md:gap-16 justify-center items-center md:flex-row">
             <div className="">
-              <h2 className="font-serif text-2xl md:text-3xl">
+              <h2 className="font-sans text-2xl md:text-3xl">
                 Let's build something that performs !
               </h2>
               <p className="text-sm mt-2 md:text-base">

@@ -5,12 +5,6 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
-import { DM_Serif_Display } from "next/font/google";
-
-const dmSerif = DM_Serif_Display({
-  weight: "400", // it's only available in 400
-  subsets: ["latin"],
-});
 
 export const HeroSection = ({ onContactClick }) => {
   return (
@@ -122,7 +116,7 @@ export const HeroSection = ({ onContactClick }) => {
               alt="LightScreen logo"
             />
             <div
-              className={`mb-4 text-center font-semibold text-4xl tracking-wide leading-tight bg-gradient-to-b from-sky-300 to-cyan-600 text-transparent bg-clip-text animate-pulse-slow ${dmSerif.className}`}
+              className={`font-sans mb-4 text-center font-semibold text-4xl tracking-wide leading-tight bg-gradient-to-b from-sky-300 to-cyan-600 text-transparent bg-clip-text animate-pulse-slow`}
             >
               Light Screen Studio
             </div>
@@ -136,7 +130,7 @@ export const HeroSection = ({ onContactClick }) => {
             </div>
           </div>
           <div className="max-w-lg mx-auto">
-            <h1 className="font-serif text-3xl text-center mt-8 tracking-wide md:text-4xl ">
+            <h1 className="font-sans text-3xl text-center mt-8 tracking-wide md:text-4xl ">
               I build websites that grow with your brand
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">

@@ -39,7 +39,7 @@ const services = [
 
 export const ServicesSection = () => {
   return (
-    <section className="pb-16 lg:py-24 scroll-mt-24" id="services">
+    <section className="pb-16 lg:py-12 scroll-mt-24" id="services">
       <div className="container">
         <SectionHeader
           title="How I Can Help You"
@@ -60,7 +60,7 @@ export const ServicesSection = () => {
               <span className="text-4xl font-bold text-sky-400 mr-3">
                 {service.number}
               </span>
-              <h3 className="text-3xl font-semibold ">
+              <h3 className="text-3xl font-semibold font-mono ">
                 <Typewriter
                   words={[service.title]}
                   loop={1}

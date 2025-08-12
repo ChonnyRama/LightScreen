@@ -53,7 +53,7 @@ export const CaseStudySection = () => {
                 <span>&bull;</span>
                 <span>{caseStudy.year}</span>
               </div>
-              <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">
+              <h3 className="font-sans text-2xl mt-2 md:text-4xl md:mt-5">
                 {caseStudy.title}
               </h3>
               <p className="mt-4 text-white/70">{caseStudy.description}</p>

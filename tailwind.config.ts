@@ -22,8 +22,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: "var(--font-sans)",
-        serif: "var(--font-serif)",
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
       },
       animation: {
         "ping-large": "ping-large 1s ease-in-out infinite",

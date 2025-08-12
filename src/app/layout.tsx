@@ -2,13 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const calistoga = Calistoga({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  weight: ["400"],
-});
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
   title: "Light Screen Studio – Web Design for Creators",
@@ -47,8 +42,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twMerge(
-          inter.variable,
-          calistoga.variable,
+          GeistSans.variable,
+          GeistMono.variable,
           "bg-gray-900 text-white antialiased font-sans"
         )}
       >
