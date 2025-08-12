@@ -131,12 +131,13 @@ export const HeroSection = ({ onContactClick }) => {
           </div>
           <div className="max-w-lg mx-auto">
             <h1 className="font-sans text-3xl text-center mt-8 tracking-wide md:text-4xl ">
-              I build websites that grow with your brand
+              Websites and Systems That Grow With You
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I help small brands and creatives launch fast, high-performing
-              websites that look great, convert visitors, and get found so you
-              can focus on growing your business, not fighting your tools.
+              I help creative entrepreneurs and small brands build digital
+              systems that quietly handle the busywork so you can stay focused
+              on what you do best: creating, connecting, and growing your
+              business.
             </p>
           </div>
           <div className="flex flex-col items-center mt-8 gap-4 md:flex-row justify-center">

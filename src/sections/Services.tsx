@@ -35,6 +35,17 @@ const services = [
       "SEO Audits & Analysis",
     ],
   },
+  {
+    number: "04",
+    title: "Automation",
+    description:
+      "Running a business shouldn’t mean being buried in repetitive tasks. I create behind-the-scenes systems that quietly manage the details. From product drops to customer follow-ups I'll make it so that you can spend more time growing your brand and less time glued to your screen.",
+    features: [
+      "Product Launch Workflows",
+      "Hands-Off Customer Follow-Up",
+      "Inventory & Tagging Systems",
+    ],
+  },
 ];
 
 export const ServicesSection = () => {

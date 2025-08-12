@@ -35,7 +35,7 @@ export const Header = ({ onContactClick }: { onContactClick: () => void }) => {
             Services
           </a>
           <a
-            href="#projects"
+            href="#case-study"
             className={
               "nav-item " + (selected === "projects" ? selectedStyle : "")
             }

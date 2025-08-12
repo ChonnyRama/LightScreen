@@ -6,8 +6,9 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
-  title: "Light Screen Studio – Web Design for Creators",
-  description: "Helping brands shine online with custom websites that sparkle.",
+  title: "Web Development and Digital Systems | Light Screen Studio",
+  description:
+    "I help small brands and creatives launch fast, high-performing websites with systems that save time, boost visibility, and support growth.",
   openGraph: {
     title: "Light Screen Studio",
     description: "Helping brands shine online.",

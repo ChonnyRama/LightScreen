@@ -11,33 +11,33 @@ import { Fragment } from "react";
 
 const testimonials = [
   {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
+    name: "David Wynn",
+    position: "Founder @ SoftSpots Plushies",
+    text: "Working with Chonny was like hiring a second brain for my business. He set up systems that save me hours every week. Product drops, emails, SEO it just runs now. I finally feel like I can breathe and focus on creating again.",
     avatar: memojiAvatar1,
   },
   {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
+    name: "Jules Rivera",
+    position: "Artist & Shop Owner @ JulesDrawsStuff",
+    text: "I had no idea how much time I was wasting until Chonny came in and streamlined everything. He didn’t just make my Shopify store look better. He made it work better. Every small brand needs someone like this.",
     avatar: memojiAvatar2,
   },
   {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
+    name: "Riley Kim",
+    position: "Owner @ CozyCore Studio",
+    text: "Before working with Chonny, I dreaded product launches. Now everything from the listings to the emails to social captions basically takes care of itself. It’s been a total game changer for my shop and my sanity.",
     avatar: memojiAvatar3,
   },
   {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
+    name: "Melanie T.",
+    position: "Owner @ Melagurumi",
+    text: "Chonny didn’t just build a website. He built the backbone of my entire store. From organizing my product categories to setting up personalized customer flows, everything now feels effortless. Highly, highly recommend.",
     avatar: memojiAvatar4,
   },
   {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
+    name: "Leo Santiago",
+    position: "Illustrator & Vendor @ LeoSantiArt",
+    text: "As someone who sells at cons and online, I always felt like I was behind on digital stuff. Chonny helped me set up systems that keep my shop consistent even when I’m busy prepping for shows. It’s like having a quiet assistant in the background.",
     avatar: memojiAvatar5,
   },
 ];

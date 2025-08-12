@@ -9,6 +9,7 @@ import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { ServicesSection } from "@/sections/Services";
+import { PackagesSection } from "@/sections/Packages";
 import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
 
@@ -24,7 +25,8 @@ export default function Home() {
       <Header onContactClick={() => setShowContact(true)} />
       <HeroSection onContactClick={() => setShowContact(true)} />
       <ServicesSection />
-      <ProjectsSection />
+      <PackagesSection />
+      {/* <ProjectsSection /> */}
       <CaseStudySection />
       <TapeSection />
       <TestimonialsSection />
