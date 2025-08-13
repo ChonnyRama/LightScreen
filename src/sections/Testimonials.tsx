@@ -72,9 +72,9 @@ export const TestimonialsSection = () => {
                         <p className="text-lg font-semibold">
                           {testimonial.name}
                         </p>
-                        <p className="text-sm text-gray-400">
+                        {/* <p className="text-sm text-gray-400">
                           {testimonial.position}
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                     <p className="mt-4 md:mt-6 text-white/80 text-sm md:text-base">

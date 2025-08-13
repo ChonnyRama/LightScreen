@@ -1,13 +1,15 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 
 export default function ContactModal({
   isOpen,
   onClose,
+  packageName,
 }: {
   isOpen: boolean;
   onClose: () => void;
+  packageName?: string;
 }) {
   useEffect(() => {
     (async function () {
@@ -24,6 +26,17 @@ export default function ContactModal({
     document.addEventListener("keydown", handleEscape);
     return () => document.removeEventListener("keydown", handleEscape);
   }, [onClose]);
+
+  const calLink = useMemo(() => {
+    const map: Record<string, string> = {
+      "Foundation Site": "lightscreen/foundation-site",
+      "Conversion Boost": "lightscreen/conversion-boost",
+      "Growth System": "lightscreen/growth-system",
+    };
+    return packageName && map[packageName]
+      ? map[packageName]
+      : "lightscreen/30min";
+  }, [packageName]);
 
   if (!isOpen) return null;
 
@@ -43,7 +56,7 @@ export default function ContactModal({
           <div className="w-full h-full max-h-[70vh] sm:max-h-[60vh] md:max-h-[80vh] overflow-y-auto">
             <Cal
               namespace="30min"
-              calLink="lightscreen/30min"
+              calLink={calLink}
               style={{ width: "100%", height: "100%" }}
               config={{ theme: "dark" }}
             />

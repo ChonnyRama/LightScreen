@@ -15,23 +15,32 @@ import ContactModal from "@/components/ContactModal";
 
 export default function Home() {
   const [showContact, setShowContact] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string | undefined>(
+    undefined
+  );
+
+  const openContact = (pkg?: string) => {
+    setSelectedPackage(pkg);
+    setShowContact(true);
+  };
 
   return (
     <div>
       <ContactModal
         isOpen={showContact}
         onClose={() => setShowContact(false)}
+        packageName={selectedPackage}
       />
-      <Header onContactClick={() => setShowContact(true)} />
-      <HeroSection onContactClick={() => setShowContact(true)} />
+      <Header onContactClick={openContact} />
+      <HeroSection onContactClick={openContact} />
       <ServicesSection />
-      <PackagesSection />
+      <PackagesSection onContactClick={(pkg) => openContact(pkg)} />
       {/* <ProjectsSection /> */}
       <CaseStudySection />
       <TapeSection />
       <TestimonialsSection />
       <AboutSection />
-      <ContactSection onContactClick={() => setShowContact(true)} />
+      <ContactSection onContactClick={openContact} />
       <Footer />
     </div>
   );

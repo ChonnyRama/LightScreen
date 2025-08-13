@@ -31,6 +31,7 @@ const config: Config = {
         "move-right": "move-right 1s linear infinite",
         "pulse-slow": "pulse 4s ease-in-out infinite",
         "fade-in": "fade-in 0.5s ease-in-out",
+        shine: "shine 1.5s ease-out infinite",
         wave: "wave 1.2s ease-in-out",
         typewriter: "typewriter 2s steps(30, end) forwards",
         caret:
@@ -85,6 +86,10 @@ const config: Config = {
           "100%": {
             opacity: "0",
           },
+        },
+        shine: {
+          "0%": { left: "-200px" },
+          "60%, 100%": { left: "200%" },
         },
       },
     },
