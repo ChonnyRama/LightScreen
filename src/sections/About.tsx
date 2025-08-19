@@ -152,6 +152,7 @@ export const AboutSection = () => {
                       alt={`Inspiration ${i + 1}`}
                       fill
                       className="object-cover transition-transform duration-500 ease-in-out"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                     />
                   </motion.div>
                 ))}

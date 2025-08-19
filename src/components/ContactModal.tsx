@@ -11,22 +11,6 @@ export default function ContactModal({
   onClose: () => void;
   packageName?: string;
 }) {
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: "30min" });
-      cal("ui", {
-        theme: "dark",
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-    })();
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    };
-    document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
-  }, [onClose]);
-
   const calLink = useMemo(() => {
     const map: Record<string, string> = {
       "Foundation Site": "lightscreen/foundation-site",
@@ -38,7 +22,41 @@ export default function ContactModal({
       : "lightscreen/30min";
   }, [packageName]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    let canceled = false;
+
+    (async () => {
+      const mod = await import("@calcom/embed-react");
+      if (canceled) return;
+      const cal = await mod.getCalApi({ namespace: "30min" });
+      cal("ui", {
+        theme: "dark",
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+
+    return () => {
+      canceled = true;
+    };
+  }, [isOpen]); // <- always exactly 1 dep
+
+  // 3) Keydown listener; deps are always exactly 2 items
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isOpen, onClose]); // <- always exactly 2 deps
+
   if (!isOpen) return null;
+
+  // 4) Render Cal only when open so it doesn't hydrate early
+  //    Import dynamically so it isn't in the main bundle
+  const Cal = require("@calcom/embed-react").default;
 
   return (
     <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur flex items-center justify-center p-6">

@@ -1,9 +1,13 @@
-"use client";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import React from "react";
-import { Typewriter } from "react-simple-typewriter";
+import dynamic from "next/dynamic";
+
+const ClientTypewriter = dynamic(
+  () => import("@/components/ClientTypewriter"),
+  { ssr: false, loading: () => null } // or render plain text as a fallback
+);
 
 const services = [
   {
@@ -72,12 +76,7 @@ export const ServicesSection = () => {
                 {service.number}
               </span>
               <h3 className="text-3xl font-semibold font-mono ">
-                <Typewriter
-                  words={[service.title]}
-                  loop={1}
-                  cursor
-                  cursorStyle="_"
-                />
+                <ClientTypewriter text={service.title} />
               </h3>
               <div className="md:col-start-2">
                 <p className="text-white/80 mb-4">{service.description}</p>
