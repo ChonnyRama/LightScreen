@@ -1,11 +1,8 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import ContactTrigger from "@/components/contact/ContactTrigger";
 
-export const ContactSection = ({
-  onContactClick,
-}: {
-  onContactClick: () => void;
-}) => {
+export const ContactSection = () => {
   return (
     <div className="py-16 pt-12 lg:py-24 lg:pt-20">
       <div className="container" id="contact">
@@ -32,10 +29,7 @@ export const ContactSection = ({
               </p>
             </div>
             <div className="">
-              <button
-                onClick={onContactClick}
-                className="relative inline-flex items-center px-6 h-12 gap-2 rounded-xl w-max border border-gray-950 bg-gray-900 text-white overflow-hidden group transition-all duration-300"
-              >
+              <ContactTrigger className="relative inline-flex items-center px-6 h-12 gap-2 rounded-xl w-max border border-gray-950 bg-gray-900 text-white overflow-hidden group transition-all duration-300">
                 {/* Sliding animated background */}
                 <span className="absolute w-48 h-48 rounded rotate-[-40deg] bg-white bottom-0 left-0 -translate-x-full translate-y-full mb-9 ml-9 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:mb-32 group-hover:ml-0"></span>
 
@@ -44,7 +38,7 @@ export const ContactSection = ({
                   Book an Appointment
                 </span>
                 <ArrowUpRightIcon className="relative z-10 size-4 group-hover:text-black" />
-              </button>
+              </ContactTrigger>
             </div>
           </div>
         </div>

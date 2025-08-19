@@ -1,6 +1,7 @@
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import CheckIcon from "@/assets/icons/check-circle.svg";
+import ContactTrigger from "@/components/contact/ContactTrigger";
 
 const packages = [
   {
@@ -45,11 +46,7 @@ const packages = [
   },
 ];
 
-export const PackagesSection = ({
-  onContactClick,
-}: {
-  onContactClick: (pkgName: string) => void;
-}) => {
+export const PackagesSection = () => {
   return (
     <section className="py-16 lg:py-24 scroll-mt-24" id="packages">
       <div className="md:max-w-[1080px] mx-auto px-4">
@@ -82,15 +79,15 @@ export const PackagesSection = ({
                   {pkg.price}
                 </p>
 
-                <button
+                <ContactTrigger
+                  pkg={pkg.title}
                   className="group relative flex h-12 items-center justify-center overflow-hidden rounded-md bg-white px-6 font-medium text-gray-800 transition hover:scale-110 mx-auto"
-                  onClick={() => onContactClick(pkg.title)}
                 >
                   <span>{pkg.cta}</span>
                   <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]">
                     <div className="relative h-full w-8 bg-black/40"></div>
                   </div>
-                </button>
+                </ContactTrigger>
               </div>
             </Card>
           ))}

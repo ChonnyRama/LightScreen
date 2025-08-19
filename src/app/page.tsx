@@ -1,4 +1,3 @@
-"use client";
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
 import { ProjectsSection } from "@/sections/Projects";
@@ -10,38 +9,27 @@ import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 import { ServicesSection } from "@/sections/Services";
 import { PackagesSection } from "@/sections/Packages";
-import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
+import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
+
+// Interactive stuff
 
 export default function Home() {
-  const [showContact, setShowContact] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState<string | undefined>(
-    undefined
-  );
-
-  const openContact = (pkg?: string) => {
-    setSelectedPackage(pkg);
-    setShowContact(true);
-  };
-
   return (
     <div>
-      <ContactModal
-        isOpen={showContact}
-        onClose={() => setShowContact(false)}
-        packageName={selectedPackage}
-      />
-      <Header onContactClick={openContact} />
-      <HeroSection onContactClick={openContact} />
-      <ServicesSection />
-      <PackagesSection onContactClick={(pkg) => openContact(pkg)} />
-      {/* <ProjectsSection /> */}
-      <CaseStudySection />
-      <TapeSection />
-      <TestimonialsSection />
-      <AboutSection />
-      <ContactSection onContactClick={openContact} />
-      <Footer />
+      <ContactModalProvider>
+        <Header />
+        <HeroSection />
+        <ServicesSection />
+        <PackagesSection />
+        {/* <ProjectsSection /> */}
+        <CaseStudySection />
+        <TapeSection />
+        <TestimonialsSection />
+        <AboutSection />
+        <ContactSection />
+        <Footer />
+      </ContactModalProvider>
     </div>
   );
 }

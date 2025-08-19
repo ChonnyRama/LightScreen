@@ -5,12 +5,9 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
+import ContactTrigger from "@/components/contact/ContactTrigger";
 
-type HeroSectionProps = {
-  onContactClick: () => void;
-};
-
-export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
+export const HeroSection = () => {
   return (
     <div
       className="py-28 md:py-44 lg:py-56 lg:-mt-10 relative z-0 overflow-x-clip"
@@ -151,10 +148,7 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               </a>
               <ArrowDown className="size-4" />
             </button>
-            <button
-              onClick={onContactClick}
-              className="relative inline-flex items-center gap-2 px-6 h-12 overflow-hidden bg-white text-gray-900 rounded-xl group transition-all duration-300"
-            >
+            <ContactTrigger className="relative inline-flex items-center gap-2 px-6 h-12 overflow-hidden bg-white text-gray-900 rounded-xl group transition-all duration-300">
               {/* Animated sliding background */}
               <span className="absolute w-48 h-48 rounded rotate-[-40deg] bg-sky-500 bottom-0 left-0 -translate-x-full translate-y-full mb-9 ml-9 transition-all duration-500 ease-out group-hover:translate-x-0 group-hover:mb-32 group-hover:ml-0"></span>
 
@@ -163,7 +157,7 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               <span className="relative z-10 font-semibold transition-colors duration-300 ease-in-out group-hover:text-white">
                 Book a Call
               </span>
-            </button>
+            </ContactTrigger>
           </div>
         </div>
       </div>
