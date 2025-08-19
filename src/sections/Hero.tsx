@@ -9,7 +9,7 @@ import ContactTrigger from "@/components/contact/ContactTrigger";
 
 export const HeroSection = () => {
   return (
-    <div
+    <section
       className="py-28 md:py-44 lg:py-56 lg:-mt-10 relative z-0 overflow-x-clip"
       id="home"
     >
@@ -161,6 +161,7 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+      <div id="hero-end-sentinel" className="h-px w-full" />
+    </section>
   );
 };
