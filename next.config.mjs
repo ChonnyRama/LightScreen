@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
+import bundleAnalyzer from "@next/bundle-analyzer";
+
 const nextConfig = {
+  reactStrictMode: true,
+  experimental: { optimizePackageImports: ["lucide-react", "date-fns"] },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -45,4 +49,8 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+const withAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
+
+export default withAnalyzer(nextConfig);

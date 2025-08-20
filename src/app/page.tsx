@@ -1,16 +1,32 @@
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
-import { ProjectsSection } from "@/sections/Projects";
-import { CaseStudySection } from "@/sections/CaseStudy";
-import { TapeSection } from "@/sections/Tape";
-import { TestimonialsSection } from "@/sections/Testimonials";
-import { AboutSection } from "@/sections/About";
-import { ContactSection } from "@/sections/Contact";
-import { Footer } from "@/sections/Footer";
-import { ServicesSection } from "@/sections/Services";
-import { PackagesSection } from "@/sections/Packages";
-import ContactModal from "@/components/ContactModal";
 import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
+import dynamic from "next/dynamic";
+
+const ServicesSection = dynamic(() =>
+  import("@/sections/Services").then((mod) => mod.ServicesSection)
+);
+const PackagesSection = dynamic(() =>
+  import("@/sections/Packages").then((mod) => mod.PackagesSection)
+);
+const CaseStudySection = dynamic(() =>
+  import("@/sections/CaseStudy").then((mod) => mod.CaseStudySection)
+);
+const TapeSection = dynamic(() =>
+  import("@/sections/Tape").then((mod) => mod.TapeSection)
+);
+const TestimonialsSection = dynamic(() =>
+  import("@/sections/Testimonials").then((mod) => mod.TestimonialsSection)
+);
+const AboutSection = dynamic(() =>
+  import("@/sections/About").then((mod) => mod.AboutSection)
+);
+const ContactSection = dynamic(() =>
+  import("@/sections/Contact").then((mod) => mod.ContactSection)
+);
+const Footer = dynamic(() =>
+  import("@/sections/Footer").then((mod) => mod.Footer)
+);
 
 // Interactive stuff
 

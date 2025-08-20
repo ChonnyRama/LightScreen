@@ -23,10 +23,10 @@ export default function HomeClient() {
         onClose={() => setShowContact(false)}
         packageName={selectedPackage}
       />
-      <Header onContactClick={openContact} />
-      <HeroSection onContactClick={openContact} />
-      <PackagesSection onContactClick={(pkg) => openContact(pkg)} />
-      <ContactSection onContactClick={openContact} />
+      <Header />
+      <HeroSection />
+      <PackagesSection />
+      <ContactSection />
     </>
   );
 }

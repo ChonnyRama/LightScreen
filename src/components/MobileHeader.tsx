@@ -56,7 +56,7 @@ export default function MobileHeader() {
       >
         {/* Mode A: Nav pills (shown while hero is visible) */}
         {!compact && (
-          <nav className="flex gap-1 overflow-x-auto no-scrollbar">
+          <nav className="flex justify-center gap-1 overflow-x-auto no-scrollbar">
             {links.map((l) => (
               <button
                 key={l.id}

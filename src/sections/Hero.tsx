@@ -1,4 +1,4 @@
-import lsLogo from "@/assets/images/LSlogo.png";
+import lsLogo from "@/assets/images/LSlogo.webp";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
@@ -10,7 +10,7 @@ import ContactTrigger from "@/components/contact/ContactTrigger";
 export const HeroSection = () => {
   return (
     <section
-      className="py-24 md:py-44 lg:py-56 lg:-mt-10 relative z-0 overflow-x-clip"
+      className="py-24 md:py-44 lg:py-56 lg:-mt-10 relative z-0 overflow-x-clip text-base"
       id="home"
     >
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] -z-10">
@@ -121,7 +121,7 @@ export const HeroSection = () => {
               height={100}
               priority
               sizes="(max-width: 768px) 80px, 100px"
-              className="w-[100px] h-[100px] md:w-[100px] md:h-[100px]"
+              className="w-[100px] h-[100px]"
             />
             <div
               className={`font-sans mb-4 text-center font-semibold text-4xl tracking-wide leading-tight bg-gradient-to-b from-sky-300 to-cyan-600 text-transparent bg-clip-text motion-safe:animate-pulse-slow`}
@@ -138,7 +138,7 @@ export const HeroSection = () => {
             </div>
           </div>
           <div className="max-w-lg mx-auto">
-            <h1 className="font-sans text-3xl text-center mt-8 tracking-wide md:text-4xl ">
+            <h1 className="font-sans text-3xl text-center mt-8 tracking-wide md:text-4xl">
               Websites and Systems That Grow With You
             </h1>
             <p className="mt-4 text-center text-base text-white/60 md:text-lg">
